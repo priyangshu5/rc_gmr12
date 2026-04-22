@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+  <title>Flaxxy • RC GAMER 12</title>
+  
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&family=Rajdhani:wght@300;400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== LOADING / ENTER OVERLAY ===== -->
+  <div id="enterOverlay" class="enter-overlay">
+    <div class="enter-container">
+      <div class="glitch-text">FLAXXY</div>
+      <div class="subtitle">RC GAMER 12 // rc_gmr12</div>
+      <button id="enterBtn" class="enter-btn">
+        <span>ENTER THE GRID</span>
+        <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
+    <div class="overlay-footer">flaxxy • ai core v1.0</div>
+  </div>
+
+  <!-- ===== MAIN APP (hidden until Enter) ===== -->
+  <div id="mainApp" class="main-app hidden">
+    
+    <!-- Animated Background Grid -->
+    <div class="cyber-grid"></div>
+    
+    <!-- Cursor Glow Trail (JavaScript driven) -->
+    <div id="cursorGlow" class="cursor-glow"></div>
+
+    <!-- Floating Particles (CSS) -->
+    <div class="particles">
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+      <div class="particle"></div>
+    </div>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar glass">
+      <div class="nav-brand">
+        <span class="brand-main glow-blue">RC GAMER 12</span>
+        <span class="brand-tag">rc_gmr12</span>
+      </div>
+      <div class="nav-center">
+        <div class="online-status">
+          <span class="pulse-dot"></span>
+          <span>Flaxxy Online</span>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <button id="musicToggleBtn" class="icon-btn" title="Toggle Music">
+          <i class="fas fa-music"></i>
+        </button>
+        <button id="clearChatBtn" class="icon-btn" title="Clear Chat">
+          <i class="fas fa-trash-alt"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero-section">
+      <div class="hero-container">
+        <!-- Rotating Ring & Image Wrapper -->
+        <div class="hero-image-wrapper">
+          <div class="rotating-ring"></div>
+          <div class="pulse-glow"></div>
+          <div class="scan-effect"></div>
+          <img 
+            src="assets/images/650010139_17857228842670775_1812088786450021777_n.jpg" 
+            alt="RC GAMER 12" 
+            class="hero-image"
+            id="heroImage"
+          >
+        </div>
+        <div class="hero-name">
+          <h1 class="glow-blue large">RC GAMER 12</h1>
+          <div class="flaxxy-tag">assisted by <span class="glow-purple">Flaxxy</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CHAT INTERFACE ===== -->
+    <section class="chat-section">
+      <div class="chat-container glass">
+        <!-- Chat Header -->
+        <div class="chat-header">
+          <div class="chat-header-left">
+            <i class="fas fa-robot glow-purple"></i>
+            <span class="chat-title">Flaxxy <span class="ai-badge">AI</span></span>
+          </div>
+          <div class="chat-header-right">
+            <span class="typing-indicator" id="typingIndicator">
+              <span></span><span></span><span></span>
+            </span>
+          </div>
+        </div>
+
+        <!-- Chat Messages Area -->
+        <div id="chatMessages" class="chat-messages">
+          <!-- Messages will be injected by JavaScript -->
+        </div>
+
+        <!-- Chat Input Area -->
+        <div class="chat-input-area">
+          <input 
+            type="text" 
+            id="chatInput" 
+            class="chat-input" 
+            placeholder="Message Flaxxy..." 
+            autocomplete="off"
+          >
+          <button id="sendBtn" class="send-btn">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+      <div class="footer-left">
+        <span>flaxxy.ai</span>
+      </div>
+      <div class="footer-center">
+        <span>rc_gmr12</span>
+      </div>
+      <div class="footer-right">
+        <span>© RC GAMER 12</span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Background Music Element (controlled by JS) -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="assets/music/Mood (Lofi) - Yagih Mael (320k).mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
